@@ -1,0 +1,53 @@
+@use "/src/sass/base/mixins.scss" as *;
+@use "/src/sass/base/variables.scss" as *;
+
+.title-first {
+    cursor:default;
+    color: #FFF;
+    &__main {
+        display: block;
+        text-transform: uppercase;
+        font-size: 50px;
+        font-weight: 800;
+        line-height: 60px;
+        letter-spacing: 10px;
+        animation: leftToRight 2s ease-in-out;
+        backface-visibility: hidden;
+        animation-fill-mode: backwards;
+    }
+    &__secondary {
+        display: block;
+        margin-top: 10px;
+        font-size: 40px;
+        font-weight: 100;
+        line-height: 48px;
+        letter-spacing: 5px;
+        animation: rightToLeft 2s ease-in-out;
+        backface-visibility: hidden;
+    }
+}
+
+@keyframes leftToRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes rightToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+    }
+}

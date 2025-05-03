@@ -1,0 +1,31 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.header {
+    position: relative;
+    height: 95vh;
+    background: linear-gradient(90deg, rgba(186, 133, 84, 0.70) 0.03%, rgba(1, 1, 1, 0.70) 99.94%), url(/src/img/header-background.jpg) lightgray 0px -176.183px / 100% 121.33% no-repeat;
+    clip-path: polygon(0 0,100% 0, 100% 100%, 0 80% );
+    &__logo {
+        // cursor: pointer;
+        position: absolute;
+        left: 50px;
+        top: 50px;
+        width: 56px;
+        height: 70px;
+    }
+    &__box {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    &__btn {
+        margin-top: 50px;
+        animation: BtnToUp 1s ease-in-out .4s;
+        animation-fill-mode: backwards;
+    }
+}
+
